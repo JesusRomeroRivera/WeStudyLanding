@@ -1,10 +1,12 @@
 <template>
   <section class="Principal">
     <div class="Principal--Info">
-      <h1 class="Principal--Title">Plataforma que te acerca a tu curso ideal</h1>
+      <h1 class="Principal--Title">
+        Plataforma que te acerca a tu curso ideal
+      </h1>
       <p class="Principal--Text">
-        Plataforma que te acerca a tu curso ideal con nuestro buscador de manera eficiente,
-        con procesos unificados y simplificados.
+        Plataforma que te acerca a tu curso ideal con nuestro buscador de manera
+        eficiente, con procesos unificados y simplificados.
       </p>
       <px-button class="Principal--Button" :color="buttonBlue"
         >Contáctanos</px-button
