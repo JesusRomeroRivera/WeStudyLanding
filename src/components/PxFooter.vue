@@ -1,18 +1,14 @@
 <template>
   <footer class="Footer">
-    <div class="Footer--Info">
-      <img class="Header--Logo" src="@/assets/Logo.png" alt="westudy" />
-      <p class="Footer--Text">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa
-        ullamcorper consectetur arcu odio elit.
-      </p>
-    </div>
+    <a class="Footer--Logo" href="#Inicio">
+      <img src="../assets/logo.png" alt="westudy" />
+    </a>
     <div class="Footer--Container">
       <h3 class="Footer--Title">Secciones</h3>
-      <p class="Footer--Text">Inicio</p>
-      <p class="Footer--Text">Nosotros</p>
-      <p class="Footer--Text">Nuestra App</p>
-      <p class="Footer--Text">Contáctanos</p>
+      <a class="Footer--Text" href="#Inicio">Inicio</a>
+      <a class="Footer--Text" href="#Beneficios">Beneficios</a>
+      <a class="Footer--Text" href="#Secciones">Secciones</a>
+      <a class="Footer--Text" href="#Solucion">¿Cómo funciona?</a>
     </div>
     <div class="Footer--Container">
       <h3 class="Footer--Title">Redes Sociales</h3>
@@ -46,12 +42,18 @@ export default {
 <style scoped>
 .Footer {
   width: 100vw;
-  height: 320px;
-  padding: 0 8vw;
+  height: 24rem;
+  padding: 4rem 8vw;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   box-sizing: border-box;
+}
+.Footer--Logo{  
+  height: 26%;
+}
+.Footer--Logo img{
+  height: 100%;
 }
 .Footer--Info {
   width: 25vw;
@@ -75,6 +77,7 @@ export default {
   font-weight: 600;
   font-size: 1.6rem;
   color: var(--strong-gray);
+  text-decoration: none;
 }
 .Header--Logo {
   margin: 0;

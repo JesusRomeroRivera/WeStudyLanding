@@ -10,18 +10,21 @@
 :root {
   --principal-font: "Montserrat", serif;
   --off-white: #f3f7ff;
-  --soft-gray: #d9d9d9;
-  --strong-gray: #b3b3b3;
   --off-black: #0d0949;
-  --principal-color: #5f75da;
-  --header-height: 12.5vh;
-  --blue-gradient: linear-gradient(0deg, #708ae4 0%, #a4b1ff 100%);
+  --title-color: #ACF0FF;
+  --light-blue: #DCEBFF;
+  --strong-blue: #4479FF;
+  --principal-color: #3101FF;
+  --header-height: 7rem;
+  --blue-gradient: linear-gradient(90deg, rgba(68,121,255,1) 0%, rgba(187,89,255,1) 100%);
+  scroll-padding-top: var(--header-height);
 }
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
   font-family: var(--principal-font);
   overflow-x: hidden;
+  
 }
 body {
   margin: 0;
@@ -29,6 +32,24 @@ body {
 }
 #app {
   font-family: var(--principal-font);
+}
+h1{
+  margin: 0;
+}
+p{
+  margin: 0;
+}
+input{
+  outline: none;
+  border: 0;
+}
+textarea{
+  outline: 0;
+  border: 0;
+}
+svg{
+  margin: 0;
+  padding: 0;
 }
 </style>
 <script>

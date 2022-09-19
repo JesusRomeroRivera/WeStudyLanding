@@ -1,27 +1,38 @@
 <template>
-  <section class="Contact">
-    <div class="Contact--Container">
-      <h3 class="Contact--Title">
-        ¿Listo para disfrutar de los beneficios de WeStudy?
-      </h3>
+  <section id="Formulario" class="Contact">
+      <h1 class="Contact--Title">
+        ¿Quieres saber más?
+      </h1>
       <p class="Contact--Text">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa
-        ullamcorper consectetur arcu odio elit. Libero sit ut convallis gravida
-        elementum.
+        Si nuestra propuesta te interesó, te invitamos a que nos dejes 
+        tus datos para que puedas acceder apenas la plataforma este disponible.
       </p>
-      <div class="Contact--Form">
-        <input type="text" class="Contact--Box" placeholder="Nombre" />
-        <input type="text" class="Contact--Box" placeholder="E-mail" />
-        <textarea
-          class="Contact--Textarea"
-          type="text"
-          placeholder="Déjanos un mensaje"
-        />
-        <px-button class="Contact--Button" :color="buttonWhite"
-          >Enviar</px-button
-        >
-      </div>
-    </div>
+      <section class="Contact--Container">
+        <div class="Contact--Container--Info">
+          <p class="Contact--Container--Info--Title">Utiliza las siguientes vías de contacto, o rellena el formulario.</p>
+          <p class="Contact--Container--Info--Text">Vía E-mail:</p>
+          <p class="Contact--Container--Info--Text">WeStudy@gmail.com</p>
+          <p class="Contact--Container--Info--Text">Por teléfono:</p>
+          <p class="Contact--Container--Info--Text">952 123 567</p>
+        </div>
+        <div class="Contact--Container--Form">
+          <input type="text" class="Contact--Box" placeholder="Nombre" />
+          <input type="text" class="Contact--Box" placeholder="Apellido" />
+          <input type="text" class="Contact--Box" placeholder="E-mail" />
+          <input type="text" class="Contact--Box" placeholder="Teléfono celular (opcional)" />
+          <textarea
+            class="Contact--Textarea"
+            type="text"
+            placeholder="Escribe un comentario (opcional)"
+          />
+          <p class="Contact--Container--Title">También estoy interesad@ en:</p>
+          <label class="Contact--Container--Checkbox">Sección Comunidad<input class="InputCheckbox" type="checkbox" id="cbox1" value="first_checkbox"></label>
+          <label class="Contact--Container--Checkbox">Sección Eventos de WeStudy<input class="InputCheckbox" type="checkbox" id="cbox1" value="first_checkbox"></label>
+          <px-button class="Contact--Button" :color="buttonBlue"
+            >¡Estoy interesado/a!</px-button
+          >
+        </div>
+      </section>
   </section>
 </template>
 
@@ -35,19 +46,13 @@ export default {
   },
   data() {
     return {
-      buttonWhite: "white",
+      buttonBlue: "blue",
       userData: {
         firstName: "",
         lastName: "",
         imageUrl: "",
         description: "",
         phoneNumber: "",
-      },
-      address: {
-        region: "",
-        province: "",
-        district: "",
-        fullAddress: "",
       },
     };
   },
@@ -56,60 +61,100 @@ export default {
 </script>
 <style scoped>
 .Contact {
-  padding: 10vh 8vw;
-  height: 100vh;
+  padding: 20rem 8vw 10rem 8vw;
+  height: 90rem;
   box-sizing: border-box;
-}
-.Contact--Container {
+  background: rgb(68,121,255);
+  background: var(--blue-gradient);
   display: flex;
   flex-direction: column;
-  height: 100%;
-  background: var(--blue-gradient);
-  border-radius: 2rem;
   align-items: center;
   justify-content: space-between;
-  padding: 10vh 10vw;
-  box-sizing: border-box;
   gap: 2.4rem;
 }
 .Contact--Title {
-  font-size: 3.6rem;
+  font-size: 3rem;
   font-weight: 700;
-  margin: 0;
-  color: #ffffff;
+  color: #fff;
   text-align: center;
 }
 .Contact--Text {
   font-size: 1.6rem;
-  font-weight: 600;
-  margin: 0;
-  color: #f0f0f0;
+  font-weight: 500;
+  color: #fff;
   text-align: center;
+  padding: 0 10vw;
 }
-.Contact--Form {
+.Contact--Container{
+  height: 70%;
   width: 100%;
   display: grid;
-  height: 80%;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 3fr 60px;
-  align-items: center;
-  gap: 2.5rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
 }
-.Contact--Box {
-  padding: 1.2rem 0 1.2rem 2.5rem;
-  border-radius: 2rem;
-  border-color: white;
+.Contact--Container--Info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.2rem;
+  color: var(--off-white);
+}
+.Contact--Container--Info--Title{
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+.Contact--Container--Info--Text{
   font-weight: 500;
   font-size: 1.6rem;
+}
+.Contact--Container--Form {
+  width: 100%;
+  display: grid;
+  height: 100%;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 3.6rem 3.6rem 1fr 2rem 2rem 6rem;
+  align-items: center;
+  column-gap: 2rem;
+  row-gap: 1.4rem;
+}
+.Contact--Container--Title{
+  grid-column-start: 1;
+  grid-column-end: 3;
+  font-size: 1.6rem;
+  color: var(--off-white);
+  font-weight: 600;
+}
+.Contact--Container--Checkbox{
+  color: var(--off-white);
+  font-weight: 400;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.InputCheckbox{
+  width: 2rem;
+  height: 2rem;
+  border: 0;
+  outline: 0;
+}
+.Contact--Box {
+  padding: 1.2rem 0 1.2rem 2rem;
+  border-radius: 1.2rem;
+  border-color: white;
+  font-weight: 500;
+  font-size: 1.4rem;
   color: var(--strong-gray);
   box-sizing: border-box;
+  height: 100%;
 }
 .Contact--Textarea {
   grid-column-start: 1;
   grid-column-end: 3;
-  padding: 1.2rem 0 0 2.5rem;
+  padding: 1.2rem 0 0 2rem;
   height: 100%;
-  border-radius: 2rem;
+  border-radius: 1.2rem;
   border-color: white;
   font-weight: 500;
   font-size: 1.6rem;
@@ -120,6 +165,6 @@ export default {
   grid-column-start: 1;
   grid-column-end: 3;
   justify-self: flex-end;
-  width: 20rem;
+  width: 25rem;
 }
 </style>

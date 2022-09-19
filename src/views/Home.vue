@@ -1,31 +1,38 @@
 <template>
   <section class="Home">
     <px-principal></px-principal>
-    <px-quote></px-quote>
+    <px-curve :color=colorWhite></px-curve>
+    <px-benefit></px-benefit>
+    <px-sections></px-sections>
     <px-solution></px-solution>
-    <px-feature></px-feature>
     <px-contact></px-contact>
   </section>
 </template>
 
 <script>
 import PxPrincipal from "@/components/PxPrincipal.vue";
-import PxQuote from "@/components/PxQuote.vue";
+import PxBenefit from "@/components/PxBenefit.vue";
 import PxContact from "@/components/PxContact.vue";
 import PxSolution from "@/components/PxSolution.vue";
-import PxFeature from "@/components/PxFeature.vue";
+import PxSections from "@/components/PxSections.vue";
+import PxCurve from "@/components/PxCurve.vue";
 
 export default {
   name: "home-view",
   components: {
     PxPrincipal,
-    PxQuote,
+    PxBenefit,
     PxContact,
     PxSolution,
-    PxFeature,
+    PxSections,
+    PxCurve
   },
   data() {
-    return {};
+    return {
+      colorWhite: '#ffffff',
+      lightBlue: '#DCEBFF',
+      strongBlue: '#A4BAFF',
+    };
   },
 };
 </script>

@@ -1,13 +1,17 @@
 <template>
   <header class="Header">
-    <img class="Header--Logo" src="@/assets/Logo.png" alt="westudy" />
+    <a class="Header--LogoContainer" href="#Inicio">
+      <img class="Header--Logo" src="../assets/logo.png" alt="westudy" />
+    </a>
     <div class="Header--List">
-      <a class="Header--List--Ancle" href="#inicio">Inicio</a>
-      <a class="Header--List--Ancle" href="#nosotros">Nosotros</a>
-      <a class="Header--List--Ancle" href="#app">Nuestra App</a>
-      <a class="Header--List--Ancle" href="#contacto">Contacto</a>
+      <a class="Header--List--Ancle" href="#Inicio">Inicio</a>
+      <a class="Header--List--Ancle" href="#Beneficios">Beneficios</a>
+      <a class="Header--List--Ancle" href="#Secciones">Secciones</a>
+      <a class="Header--List--Ancle" href="#Solucion">¿Cómo funciona?</a>
     </div>
-    <px-button :color="buttonBlue">Empecemos</px-button>
+    <a href="#Formulario">
+      <px-button :color="buttonBlue">¡Estoy interesado/a!</px-button>
+    </a>
   </header>
 </template>
 
@@ -56,18 +60,24 @@ export default {
 <style scoped>
 .Header {
   width: 100vw;
-  height: 140px;
+  height: var(--header-height);
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 8vw;
+  position: fixed;
+  background-color: white;
+}
+.Header--LogoContainer{
+  height: 60%;
 }
 .Header--Logo {
   margin: 0;
+  height: 100%;
 }
 .Header--List {
-  width: 30vw;
+  width: 42vw;
   display: flex;
   justify-content: space-between;
   margin: 0;
@@ -78,8 +88,11 @@ export default {
   color: var(--strong-gray);
   font-family: var(--principal-font);
   font-size: 1.6rem;
-  font-weight: 600;
+  font-weight: 500;
   transition: 0.4s;
+  padding: 0.6rem 1.8rem;
+  background-color: #DCEBFF;
+  border-radius: 1.6rem;
 }
 .Header--List--Ancle:hover {
   transition: 0.4s;

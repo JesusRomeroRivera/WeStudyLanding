@@ -34,7 +34,7 @@ export default {
 <style scoped>
 .button {
   font-family: var(--principal-font);
-  padding: 1.8rem 3.5rem;
+  padding: 1.5rem 3.5rem;
   border: 0;
   border-radius: 2rem;
   font-size: 1.6rem;
