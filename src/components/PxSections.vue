@@ -15,7 +15,7 @@
 let image_1 = require('../assets/feature1.png');
 let image_2 = require('../assets/feature2.png');
 let image_3 = require('../assets/feature3.png');
-let image_4 = require('../assets/feature1.png');
+let image_4 = require('../assets/feature4.png');
 export default {
   name: "px-sections",
   components: {},
@@ -58,9 +58,9 @@ export default {
 <style scoped>
 .Section {
   width: 100vw;
-  height: 160rem;
+  height: 180rem;
   box-sizing: border-box;
-  padding: 25rem 8vw 15rem 8vw;
+  padding: 20rem 8vw 20rem 8vw;
   display: grid;
   grid-template-rows: 4rem 1fr;
   gap: 4rem;
@@ -78,19 +78,23 @@ export default {
 }
 .Section--Container--Section{
   height: auto;
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 3fr;
+  grid-template-rows: 3fr 7fr;
   column-gap: 2rem;
 }
 .Section--Container--Section:nth-child(odd){
-  grid-template-areas: "Img Title" "Img Text";
+  grid-template-areas: "Imagen Title" "Imagen Text";
 }
 .Section--Container--Section:nth-child(even){
-  grid-template-areas: "Title Img" "Text Img";
+  grid-template-areas: "Title Imagen" "Text Imagen";
 }
 .Section--Container--Section--Img{
-  grid-area: Img;
+  grid-area: Imagen;
+  width: 100%;
+  height: auto;
+  align-self: center;
 }
 .Section--Container--Section--Title{
   font-size: 2.4rem;
@@ -106,5 +110,48 @@ export default {
   color: var(--off-black);
   grid-area: Text;
   align-self: center;
+  margin-bottom: 5rem;
+}
+@media (max-width: 768px){
+  .Section{
+    height: 260rem;
+    padding: 15rem 8vw 20rem 8vw;
+  }
+  .Section--Container--Section{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 5rem 12.5rem 1fr;
+  }
+  .Section--Container--Section:nth-child(odd){
+    grid-template-areas: "Title" "Text" "Imagen";
+  }
+  .Section--Container--Section:nth-child(even){
+    grid-template-areas: "Title" "Text" "Imagen";
+  }
+  .Section--Container--Section--Title{
+    align-self: center;
+  }
+  .Section--Container--Section--Text{
+    margin-bottom: 0;
+  }
+}
+@media (max-width: 585px){
+  .Section{
+    height: 240rem;
+  }
+  .Section--Container--Section{
+    grid-template-rows: 5rem 15rem 1fr;
+  }
+  .Section--Container--Section--Text{
+    font-size: 1.6rem;
+  }
+}
+@media (max-width: 425px){
+  .Section{
+    height: 220rem;
+  }
+  .Section--Container--Section{
+    grid-template-rows: 5rem 17.5rem 1fr;
+  }
 }
 </style>

@@ -4,8 +4,7 @@
         ¿Quieres saber más?
       </h1>
       <p class="Contact--Text">
-        Si nuestra propuesta te interesó, te invitamos a que nos dejes 
-        tus datos para que puedas acceder apenas la plataforma este disponible.
+        Te invitamos a registrarte para acelerar el lanzamiento oficial de WeStudy.
       </p>
       <section class="Contact--Container">
         <div class="Contact--Container--Info">
@@ -61,8 +60,9 @@ export default {
 </script>
 <style scoped>
 .Contact {
-  padding: 20rem 8vw 10rem 8vw;
-  height: 90rem;
+  padding: 15rem 8vw 10rem 8vw;
+  height: 70rem;
+  width: 100vw;
   box-sizing: border-box;
   background: rgb(68,121,255);
   background: var(--blue-gradient);
@@ -73,9 +73,9 @@ export default {
   gap: 2.4rem;
 }
 .Contact--Title {
-  font-size: 3rem;
+  font-size: 3.4rem;
   font-weight: 700;
-  color: #fff;
+  color: #ACF0FF;
   text-align: center;
 }
 .Contact--Text {
@@ -98,6 +98,7 @@ export default {
   justify-content: center;
   gap: 1.2rem;
   color: var(--off-white);
+  align-self: flex-start;
 }
 .Contact--Container--Info--Title{
   font-size: 2rem;
@@ -152,7 +153,7 @@ export default {
 .Contact--Textarea {
   grid-column-start: 1;
   grid-column-end: 3;
-  padding: 1.2rem 0 0 2rem;
+  padding: 1.2rem 2rem 1.2rem 2rem;
   height: 100%;
   border-radius: 1.2rem;
   border-color: white;
@@ -167,4 +168,55 @@ export default {
   justify-self: flex-end;
   width: 25rem;
 }
+@media (max-width: 768px){
+  .Contact {
+    height: 100rem;
+    display: grid;
+    grid-template-rows: 5rem 10rem 1fr;
+  }
+  .Contact--Container{
+    height: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 20rem;
+    grid-template-areas: "Form" "Text";
+    gap: 2rem;
+  }
+  .Contact--Textarea {
+    height: 10rem;
+  }
+  
+  .Contact--Container--Info{
+    grid-area: Text;
+  }
+}
+@media (max-width: 495px){
+  .Contact {
+    height: 120rem;
+  }
+  .Contact--Container--Title{
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  .Contact--Textarea {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  .Contact--Button {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  .Contact--Container--Form {
+    width: 100%;
+    height: 60rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3.6rem 3.6rem 3.6rem 3.6rem 1fr 2rem 2rem 2rem 6rem;
+  }
+  .Contact--Container--Info--Title{
+    font-size: 1.6rem;
+  }
+  .Contact--Container--Info--Text{
+    font-size: 1.2rem;
+  }
+}
+
 </style>

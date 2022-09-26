@@ -12,8 +12,14 @@
     </div>
     <div class="Footer--Container">
       <h3 class="Footer--Title">Redes Sociales</h3>
-      <p class="Footer--Text">WeStudy_fb</p>
-      <p class="Footer--Text">WeStudy_ig</p>
+      <a class="Footer--Text" href="https://www.instagram.com/westudy_ig/?hl=es">
+        <img src="../assets/igIcon.png" alt="InstagramIcon">
+        <span>@westudy_ig</span>
+      </a>
+      <a class="Footer--Text" href="">
+        <img src="../assets/fbIcon.png" alt="">
+        <span>WeStudy</span>
+      </a>
     </div>
     <div class="Footer--Container">
       <h3 class="Footer--Title">Contacto</h3>
@@ -50,16 +56,13 @@ export default {
   box-sizing: border-box;
 }
 .Footer--Logo{  
-  height: 26%;
+  height: 4.2rem;
 }
 .Footer--Logo img{
   height: 100%;
 }
-.Footer--Info {
-  width: 25vw;
-}
 .Footer--Container {
-  width: 15vw;
+  width: auto;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -78,9 +81,36 @@ export default {
   font-size: 1.6rem;
   color: var(--strong-gray);
   text-decoration: none;
+  display: flex;
+  align-items: center;
 }
 .Header--Logo {
   margin: 0;
-  margin-bottom: 3rem;
+}
+.Footer--Text img{
+  width: 20px;
+  height: auto;
+}
+.Footer--Text span{
+  margin-left: 5px;
+}
+@media (max-width: 1024px){
+  .Footer--Container:nth-child(4){
+    display: none;
+  }
+}
+@media (max-width: 585px){
+  .Footer--Container:nth-child(2){
+    display: none;
+  }
+  .Footer{
+    height: 16rem;
+  }
+  .Footer--Title {
+    font-size: 1.4rem;
+  }
+  .Footer--Text {
+    font-size: 1.2rem;
+  }
 }
 </style>

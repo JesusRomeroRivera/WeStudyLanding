@@ -1,7 +1,7 @@
 <template>
   <section class="Home">
+    <px-curve></px-curve>
     <px-principal></px-principal>
-    <px-curve :color=colorWhite></px-curve>
     <px-benefit></px-benefit>
     <px-sections></px-sections>
     <px-solution></px-solution>

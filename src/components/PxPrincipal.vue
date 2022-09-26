@@ -2,14 +2,14 @@
   <section id="Inicio" class="Principal">
     <div class="Principal--Info">
       <h1 class="Principal--Title">
-        Descubre la nueva web de búsqueda de 
+        Descubre la nueva web de búsqueda de <br>
         <span class="Principal--Title--SpecialWord">{{ typeValue }}</span>
         <span class="Cursor" :class="{'typing:' : typeStatus}">&nbsp;</span> 
       </h1>
       <p class="Principal--Text">
         Pronto disponible con la oferta de todos los programas académicos actuales!
       </p>
-      <a href="#Formulario">
+      <a class="Formulario--Container" href="#Formulario">
         <px-button class="Principal--Button" :color="buttonBlue"
           >¡Estoy interesado/a!</px-button
         >
@@ -90,7 +90,7 @@ export default {
 .Principal {
   padding-top: var(--header-height);
   width: 100vw;
-  height: 60rem;
+  height: 80rem;
   box-sizing: border-box;
   display: grid;
   grid-template-columns: 6fr 5fr;
@@ -99,6 +99,7 @@ export default {
 }
 .Principal--Image {
   width: 100%;
+  margin-bottom: 12.5rem;
 }
 .Principal--Info {
   padding: 0 3.2vw 10rem 8vw;
@@ -136,9 +137,69 @@ export default {
   justify-self: center;
 }
 
+.Principal--Image{
+  align-self: center;
+}
+
 @keyframes cursorBlink {
     49% { background-color: #fff; }
     50% { background-color: transparent; }
     99% { background-color: transparent; }
+}
+@media (max-width: 1280px){
+  .Principal{
+    padding: 0 0 5rem 0;
   }
+}
+
+@media (max-width: 1024px){
+  .Principal{
+    height: 90rem;
+    padding: var(--header-height) 0 10rem 0;
+  }
+  .Principal--Title {
+    font-size: 4.5rem;
+  }
+}
+@media (max-width: 768px){
+  .Principal{
+    height: 120rem;
+    display: grid;
+    gap: 2.5rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 3fr;
+  }  
+  .Principal--Info {
+    padding: 0 10vw;
+  }
+  .Principal--Title {
+    font-size: 4.2rem;
+    text-align: center;
+  }
+  .Principal--Text{
+    text-align: center;
+  }
+  .Formulario--Container{
+    margin: 0 auto;
+  }
+  .Principal--Image {
+    justify-self: center;
+    width: 90%;
+    margin-bottom: 12.5rem;
+  }
+}
+@media (max-width: 585px){
+  .Principal{
+    height: 100rem;
+  }
+  .Principal--Title {
+    font-size: 3.6rem;
+  }
+  .Principal--Text {
+    font-size: 1.4rem;
+  }
+  .Principal--Image {
+    align-self: start;
+  }
+}
 </style>

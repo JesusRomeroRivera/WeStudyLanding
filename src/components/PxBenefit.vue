@@ -1,7 +1,7 @@
 <template>
   <section class="Benefit">
-    <svg id="Beneficios"  class="TopCurve" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-      <path fill="#fff" fill-opacity="1" d="M0,160L60,176C120,192,240,224,360,202.7C480,181,600,107,720,85.3C840,64,960,96,1080,112C1200,128,1320,128,1380,128L1440,128L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
+    <svg id="Beneficios" class="TopCurve" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path fill="#fff" fill-opacity="1" d="M0,96L60,85.3C120,75,240,53,360,48C480,43,600,53,720,69.3C840,85,960,107,1080,112C1200,117,1320,107,1380,101.3L1440,96L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
     </svg>
     <div class="Benefit--Content">
       <h1 class="Benefit--Title">Les ofrecemos...</h1>
@@ -14,16 +14,16 @@
       </div>
     </div>
     <svg class="BackCurve" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-      <path fill="#fff" fill-opacity="1" d="M0,224L60,218.7C120,213,240,203,360,176C480,149,600,107,720,90.7C840,75,960,85,1080,85.3C1200,85,1320,75,1380,69.3L1440,64L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
+      <path fill="#fff" fill-opacity="1" d="M0,96L60,85.3C120,75,240,53,360,48C480,43,600,53,720,69.3C840,85,960,107,1080,112C1200,117,1320,107,1380,101.3L1440,96L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
     </svg>
   </section>
 </template>
 
 <script>
-let image_1 = require('../assets/BenefitIcons/Icon1.svg');
-let image_2 = require('../assets/BenefitIcons/Icon2.svg');
-let image_3 = require('../assets/BenefitIcons/Icon3.svg');
-let image_4 = require('../assets/BenefitIcons/Icon4.svg');
+let image_1 = require('../assets/BenefitIcons/Icon1.png');
+let image_2 = require('../assets/BenefitIcons/Icon2.png');
+let image_3 = require('../assets/BenefitIcons/Icon3.png');
+let image_4 = require('../assets/BenefitIcons/Icon4.png');
 export default {
   name: "px-benefit",
   data() {
@@ -32,26 +32,26 @@ export default {
         {
           id: 1,
           url: image_1,
-          name: 'Usa la aplicación en cualquier lugar',
-          description: 'Lleva la aplicación siempre en tu dispositivo para poder consultar la información desde cualquier lugar.'
+          name: 'Encontrar el curso que mejor se adapte a ti',
+          description: 'Un marketplace con las mejores ofertas académicas de todas las universidades de Latinoamérica.'
         },
         {
           id: 2,
           url: image_2,
-          name: 'Sincroniza tus datos con tus cuentas',
-          description: 'Utiliza tus cuentas en redes sociales para sincronizar tus datos generales.'
+          name: 'Compartir tu pasión por aprender',
+          description: '¡Únete a tu gente! Espacio para interactuar y conocer personas con aspiraciones similares a las tuyas.'
         },
         {
           id: 3,
           url: image_3,
-          name: 'Accede a la aplicación sin conexión',
-          description: 'No necesitarás conexión para utilizar la aplicación, siempre tendrás la información a mano.'
+          name: 'Mejorar tu experiencia de búsqueda',
+          description: 'Encuentra el curso que tanto deseas en el menor tiempo posible y al mejor precio.'
         },
         {
           id: 4,
           url: image_4,
-          name: 'Comparte los datos con tus contactos',
-          description: 'Podrás compartir la información que te interese con tus contactos fácilmente.'
+          name: 'Impulsar tu desarrollo personal y profesional',
+          description: 'Entérate de novedades como becas, concursos, eventos de networking y más.'
         }
       ]
     };
@@ -60,14 +60,16 @@ export default {
 </script>
 <style scoped>
   .TopCurve{
-    margin-top: -20rem;
+    margin-top: -25rem;
+    min-width: 1200px;
+    background-image: center;
   }
   .BackCurve{
-    margin-top: 0;
+    min-width: 1200px;
   }
 .Benefit {
   width: 100vw;
-  height: 25rem;
+  height: 30rem;
   box-sizing: border-box;
   display: grid;
   background-color: #fff;
@@ -76,6 +78,7 @@ export default {
 .Benefit--Content{
   margin-top: -10rem;
   padding: 0 8vw;
+  width: 100vw;
   box-sizing: border-box;
   display: grid;
   grid-template-rows: 4rem 1fr;
@@ -93,14 +96,15 @@ export default {
 }
 .Benefit--Container--Feature{
   height: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-rows: 15rem 3rem 1fr;
+  justify-items: center;
+  align-items: flex-start;
   gap: 2rem;
 }
 .Benefit--Container--Feature--Img{
-  height: auto;
+  height: 15rem;
+  width: auto;
 }
 .Benefit--Container--Feature--Title{
   font-size: 1.6rem;
@@ -111,5 +115,34 @@ export default {
   font-size: 1.2rem;
   text-align: center;
   color: var(--off-black);
+}
+@media (max-width: 1280px){
+  .Benefit{
+    height: 50rem;
+  }
+  .Benefit--Container{
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 1fr;
+    row-gap: 2.5rem;
+  }
+}
+@media (max-width: 1024px){
+  .Benefit{
+    height: 55rem;
+  }
+}
+@media (max-width: 585px){
+  .Benefit{
+    height: 115rem;
+  }
+  .Benefit--Container{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    row-gap: 2.5rem;
+  }
+  .Benefit--Container--Feature--Img{
+  }
+  .Benefit--Container--Feature{
+  }
 }
 </style>

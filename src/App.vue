@@ -18,13 +18,18 @@
   --header-height: 7rem;
   --blue-gradient: linear-gradient(90deg, rgba(68,121,255,1) 0%, rgba(187,89,255,1) 100%);
   scroll-padding-top: var(--header-height);
+  overflow-x: hidden;
+}
+@media (max-width: 1024px) {
+  :root{
+    --header-height: 13rem;
+  }
 }
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
   font-family: var(--principal-font);
   overflow-x: hidden;
-  
 }
 body {
   margin: 0;

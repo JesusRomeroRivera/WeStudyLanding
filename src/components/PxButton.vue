@@ -33,6 +33,7 @@ export default {
 </script>
 <style scoped>
 .button {
+  z-index: 1;
   font-family: var(--principal-font);
   padding: 1.5rem 3.5rem;
   border: 0;
